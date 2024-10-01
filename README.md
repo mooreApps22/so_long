@@ -1,6 +1,6 @@
 # So Long
 ## This project is a very small 2D game. 
-### This is an exercise in textures, sprites, and some other very basic gameplay element.
+### This is an exercise in textures, sprites, and some other very basic gameplay elements.
 
 This project is coded in C on a GNU/Linux system. The project involves window management, event handling, colors, and textures. The graphical library used is MiniLibX which is an API designed by Olivier Crouzet to simplify use of the X11 library developed by MIT. 
 
@@ -27,3 +27,6 @@ Example Bitmap:
 **Instructions**
 1. ```make```
 2. ```./so_long map/<mapX.ber>```
+3. Play the game. To exit you can:
+  * Click the X in the corner of the window
+  * Press ```Esc``` or ```Q```

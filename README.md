@@ -5,11 +5,11 @@
 This program takes a bitmap file with a .ber extension. 
 
 Example Bitmap:
-1 = Wall
-0 = Empty Space
-P = Player
-C = Collectable
-E = Exit
+- 1 = Wall
+- 0 = Empty Space
+- P = Player
+- C = Collectable
+- E = Exit
 
 ```
 1111111111111

@@ -44,7 +44,7 @@ void	validate_map(t_game *g)
 	if (!g)
 		return ;
 	i = 0;
-	ft_printf("... Row: %d ...\n", g->map.rows);
+	ft_printf("\tRow: %d\n", g->map.rows);
 	while (i < g->map.rows)
 	{
 		parse_map_row(g, g->map.data[i], i);

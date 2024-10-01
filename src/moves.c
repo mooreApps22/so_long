@@ -39,7 +39,10 @@ void	render_move(t_game *g, int dir, int x, int y)
 	update_souls(g, x, y);
 	g->moves++;
 	if (g->map.data[y][x] == 'e' && g->souls == g->total)
+	{
+		printf("You Won!!!\n");
 		close_window(g);
+	}
 	else
 	{
 		g->pt1.x = x;

@@ -48,7 +48,7 @@ void	check_swifty(t_game *g, char *data, int y, int x)
 	g->swifty++;
 	g->pt1.y = y;
 	g->pt1.x = x;
-	ft_printf("CH SWY-Pt1: (%d, %d)\n", g->pt1.x, g->pt1.y);
+	ft_printf("SWY-Start: (%d, %d)\n", g->pt1.x, g->pt1.y);
 }
 
 void	check_exit(t_game *g, char *data, int y, int x)
@@ -79,5 +79,5 @@ void	check_components(t_game *g, char *data, int y)
 		data++;
 		x++;
 	}
-	ft_printf("++Ex: %d, Soul: %d, Sw: %d\n", g->exits, g->souls, g->swifty);
+	ft_printf("\tEx: %d, Gems: %d, Sw: %d\n", g->exits, g->souls, g->swifty);
 }

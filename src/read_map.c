@@ -51,7 +51,7 @@ int	read_map(t_game *g, char **av)
 			g->map.data[i] = ft_strtrim(g->map.line, "\n");
 			g->map.temp[i] = ft_strdup(g->map.data[i]);
 			free(g->map.line);
-			ft_printf("Data[] = %s\n", g->map.data[i]);
+			ft_printf("%s\n", g->map.data[i]);
 			i++;
 		}
 		close(g->map.fd);

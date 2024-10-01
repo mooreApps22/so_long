@@ -18,7 +18,7 @@ void	init_xwindow(t_game *g)
 	if (!g->mlx)
 		exit_game(g, "MLX failed to connect.");
 	else if (g->mlx)
-		ft_printf("... MLX is up ...\n");
+		ft_printf("MLX is up ...\n");
 	g->width = (g->map.cols * LEN);
 	g->height = (g->map.rows * LEN);
 	g->win = mlx_new_window(g->mlx, g->width, g->height, "So Long");

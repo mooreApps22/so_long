@@ -53,6 +53,7 @@ void	exit_game(t_game *g, char *msg)
 		destroy(g);
 	perror(":Error\n ");
 	ft_printf("%s", msg);
+	ft_printf("\n");
 	exit(1);
 }
 

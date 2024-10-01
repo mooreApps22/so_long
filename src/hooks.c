@@ -17,7 +17,7 @@ int	close_window(t_game *g)
 	free_maps(g);
 	destroy(g);
 	ft_printf("Moves: %d\n", g->moves);
-	ft_printf("You closed the window.");
+	ft_printf("You closed the window.\n");
 	exit(1);
 }
 

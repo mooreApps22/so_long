@@ -6,7 +6,7 @@
 /*   By: smoore <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 16:03:51 by smoore            #+#    #+#             */
-/*   Updated: 2024/04/16 09:52:50 by smoore           ###   ########.fr       */
+/*   Updated: 2024/04/16 09:47:05 by smoore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,5 @@ void	move_swifty(t_game *g, int dir)
 		render_move(g, dir, g->pt1.x, g->pt1.y);
 	if (g->souls == g->total)
 		g->map.data[g->exit.y][g->exit.x] = 'e';
+	//g->moves++;
 }

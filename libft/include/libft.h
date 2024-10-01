@@ -6,7 +6,7 @@
 /*   By: smoore <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 15:06:50 by smoore            #+#    #+#             */
-/*   Updated: 2024/04/12 19:27:59 by smoore           ###   ########.fr       */
+/*   Updated: 2024/02/15 13:46:56 by smoore           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,6 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
-
-typedef struct s_list_len
-{
-	char					*str;
-	size_t					len;
-	struct s_list_len		*next;
-}						t_list_len;
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -74,6 +57,14 @@ void		*ft_calloc(size_t nmemb, size_t size);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+
+// --------------------BONUS-----------------------------------------
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 int			ft_lstsize(t_list *lst);
 void		ft_lstadd_front(t_list **lst, t_list *new);
 void		ft_lstadd_back(t_list **lst, t_list *new);
@@ -83,16 +74,34 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstnew(void *content);
 t_list		*ft_lstlast(t_list *lst);
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void		str_copy(char *dest, const char *src, size_t n);
-void		pop_head(t_list_len **head);
-int			has_newline(t_list_len *head);
-size_t		len_of_newline(t_list_len *head);
-char		*gnl_substr(char const *s, size_t start, size_t size);
-char		*get_next_line(int fd);
-int			ft_printf(const char *f_str, ...);
-int			print_str(char *str);
-int			print_hex(unsigned int num, char f_char);
-int			print_ptr(unsigned long long ptr);
-int			print_unsigned(unsigned int num);
+
+// ---------------GET NEXT LINE--------------------------------------
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+typedef struct s_list_len
+{
+	char					*str;
+	size_t					len;
+	struct s_list_len		*next;
+}						t_list_len;
+
+void	str_copy(char *dest, const char *src, size_t n);
+void	pop_head(t_list_len **head);
+int		has_newline(t_list_len *head);
+size_t	len_of_newline(t_list_len *head);
+char	*gnl_substr(char const *s, size_t start, size_t size);
+char	*get_next_line(int fd);
+
+// ---------------------FT_PRINTF------------------------------------
+
+int	ft_printf(const char *f_str, ...);
+int	print_str(char *str);
+int	print_hex(unsigned int num, char f_char);
+int	print_ptr(unsigned long long ptr);
+int	print_unsigned(unsigned int num);
+
 
 #endif

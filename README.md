@@ -25,8 +25,9 @@ Example Bitmap:
 1111111111111
 ```
 **Instructions**
-1. ```make```
-2. ```./so_long map/<mapX.ber>```
+1. Use the ```make``` command.
+2. Execute the program: ```./so_long map/<mapX.ber>```
 3. Play the game. To exit you can:
-  * Click the X in the corner of the window
+  * Click the X in the corner of the window.
   * Press ```Esc``` or ```Q```
+  * Beat the game.

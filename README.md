@@ -19,5 +19,4 @@ E = Exit
 10000000000P1
 1111111111111```
 
-
 The program can take any configuration of a bitmap, validate it, initialize it, render the graphics, and manage input controls from the player for gameplay.

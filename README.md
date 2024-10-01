@@ -11,12 +11,14 @@ P = Player
 C = Collectable
 E = Exit
 
-<sub>1111111111111\\n
+```
+1111111111111
 1E0001000CCC1
 1111000111111
 1000011000001
 1CCC1111CCCC1
 10000000000P1
-1111111111111</sub>
+1111111111111
+```
 
 The program can take any configuration of a bitmap, validate it, initialize it, render the graphics, and manage input controls from the player for gameplay.
